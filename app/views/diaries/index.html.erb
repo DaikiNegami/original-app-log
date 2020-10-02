@@ -1,0 +1,58 @@
+<%= render "shared/header" %>
+<%= render "shared/diary-btn" %>
+
+<div class="contents">
+  <div class="first-view">
+    <h2 class='top-page-text'>〜つながり〜</h2>
+    <%= image_tag "top-page.jpg", class:"top-image" %>
+  </div>
+  <div class="main-content">
+    <div class="upper-title">
+      <h2 class="heading-name">みんなのにっき</h2>
+    </div>
+    
+    <div class="diaries">
+      <% if @diaries.present? %>
+      <% @diaries.each do |diary| %>
+      <div class="diary">
+        <%= link_to '#' do %>
+        <div class="diary-top">
+          <h4 class="message-date">
+            <%= l diary.created_at %>
+          </h4>
+          <h4 class='diary-name'>
+            <%= diary.nickname %>
+          </h4>
+        </div>
+
+        <% if diary.image.present?%>
+          <%= image_tag '#', class: "item-img" %>
+        <% else %>
+          <%= image_tag "log.jpg", class:"write-image" %>
+        <% end %>
+
+        <div class="diary-titles">
+          <p class="diary-title">
+            <%= diary.title %>
+          </p>
+        </div>
+        <% end %>
+      </div>
+      <% end %>
+      <% else %>
+      <div class="diary">
+        <div class="diary-top">
+          <h4 class="message-date">2020/10/01</h4>
+          <h4 class='diary-name'>じろう</h4>
+        </div>
+        <%= image_tag "log.jpg", class:"write-image" %>
+        <div class="diary-titles">
+          <p class="diary-title">水族館に行った</p>
+        </div>
+      </div>
+      <% end %>
+
+    </div>
+  </div>
+</div>
+<%= render "shared/footer" %>
