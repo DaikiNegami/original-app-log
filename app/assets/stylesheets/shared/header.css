@@ -1,0 +1,38 @@
+header {
+  background-color: lightcyan;
+  height: 13vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  margin-left: 10vw;
+}
+
+.heading {
+  font-size: 3.5vh;
+  padding-bottom: 0.4vh;
+  font-family: serif;
+  font-weight: bolder;
+}
+
+li {
+  list-style: none;
+}
+
+.nav-lists {
+  font-family: monospace;
+  font-weight: bolder;
+  font-size: 3vh;
+  padding-top: 6vh;
+  display: flex;
+  cursor: pointer;
+  margin-right: 8vw;
+}
+
+.nav-list1 {
+  padding-right: 8vw;
+}
+
+
