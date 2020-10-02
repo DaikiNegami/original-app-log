@@ -1,0 +1,129 @@
+header {
+  background-color: lightcyan;
+  height: 13vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title {
+  margin-left: 10vw;
+}
+
+.heading {
+  font-size: 3.5vh;
+  padding-bottom: 0.4vh;
+  font-family: serif;
+  font-weight: bolder;
+}
+
+li {
+  list-style: none;
+}
+
+.nav-lists {
+  font-family: monospace;
+  font-weight: bolder;
+  font-size: 3vh;
+  padding-top: 6vh;
+  display: flex;
+  cursor: pointer;
+  margin-right: 8vw;
+}
+
+.nav-list1 {
+  padding-right: 8vw;
+}
+
+
+
+/* コンテンツ */
+.contents {
+  background-color: white;
+}
+
+.first-view {
+  width: 100;
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.top-page-text {
+  display: block;
+  position: absolute;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  font-size: 6vh;
+  letter-spacing: 5vw;
+  padding-left: 5%;
+  padding-top: 26%;
+}
+
+.top-image {
+  width: 100vw;
+  margin-top: 4vh;
+  margin-bottom: 6vh;
+}
+
+
+/* 投稿された日記 */
+.upper-title {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.heading-name {
+  margin-bottom: 5vh;
+  border-bottom: 4px solid tomato;
+  font-size: 5vh;
+  margin-top: 6vh;
+}
+
+.diaries {
+  width: 95vw;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 3vh 2vw;
+  border: 2px solid lightblue;
+  padding-top: 2vh;
+}
+
+.diary-top {
+  display: flex;
+  justify-content: space-between;
+  width: 230px;
+}
+
+.message-date {
+  padding-left: 0.5vw;
+}
+
+.diary-name {
+  padding-right: 0.5vw;
+}
+
+.write-image {
+  width: 230px;
+  height: 190px;
+  cursor: pointer;
+}
+
+.diary-title {
+  margin-bottom: 6vh;
+  width: 230px;
+  word-wrap: keep-all;
+}
+
+
+/* フッター */
+footer {
+  height: 8vh;
+  background-color: #f0f0f0;
+  text-align: center;
+  color: gray;
+  margin-top: 8vh;
+  padding-top: 4vh;
+}
