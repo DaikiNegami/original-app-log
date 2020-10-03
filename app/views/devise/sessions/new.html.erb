@@ -1,0 +1,33 @@
+<%= render "shared/second-header"%>
+
+<%= form_with model: @user, url: user_session_path, class: 'sign-in-form', local: true do |f| %>
+<div class="sign-contents">
+  <div class="sign-content">
+    <h2 class="sign-in-title">ろぐいん</h2>
+
+    <div class="main-sign-in">
+    <%= render 'shared/error_messages', model: f.object %>
+      <div class="sign-in-email">
+        <div class='form-text-wrap'>
+          <h2 class="sign-in-titles">■めーるあどれす</h2>
+          <span class="indispensable">ひつよう</span>
+        </div>
+        <%= f.email_field :email, class:"email_form", id:"email", placeholder:"れい）logs@log.com", autofocus: true %>
+      </div>
+      <div class="sign-in-password">
+        <div class='form-text-wrap'>
+          <h2 class="sign-in-titles">■ぱすわーど</h2>
+          <span class="indispensable">ひつよう</span>
+        </div>
+        <%= f.password_field :password, class:"password_form", id:"password" %>
+      </div>
+      <div class="sign-in-send">
+        <%= f.submit "ろぐいん" ,class:"sign-send" %>
+        <%= link_to 'もどる', root_path, class:"back-btn" %>
+      </div>
+    </div>
+  </div>
+</div> 
+<% end %>
+
+<%= render "shared/footer" %>
