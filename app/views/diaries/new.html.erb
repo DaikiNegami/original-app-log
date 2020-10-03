@@ -11,14 +11,16 @@
         <div class="img-upload">
           <div class="click-upload">
           <h2 class="post-titles">■がぞう</h2>
-            <p>がぞうをあっぷろーど</p>
-            <%= f.file_field :image, id:"diary-image" %>
+            <label  class="image_input_btn" %>
+              <span>がぞうをあっぷろーど</span>
+              <%= f.file_field :image, id:"diary-image", class: "image_form" %>
+            </label>
           </div>
         </div>
         <h2 class="post-titles">■だいめい</h2>
-        <%= f.text_area :title, class:"name_form", id:"diary-name", placeholder:"だいめい" %>
+        <%= f.text_area :title, class:"name_form", id:"diary-name", placeholder:"れい）かれーをつくった" %>
         <h2 class="post-titles">■ぶんしょう</h2>
-        <%= f.text_area :text, class:"message_form", id:"diary-text", placeholder:"" %>
+        <%= f.text_area :text, class:"message_form", id:"diary-text", placeholder:"れい）はじめてかれーをつくった。とてもおいしかった。" %>
         <div class="diary-send">
           <%= f.submit "とうこう" ,class:"send" %>
           <%=link_to 'もどる', root_path, class:"back-btn" %>

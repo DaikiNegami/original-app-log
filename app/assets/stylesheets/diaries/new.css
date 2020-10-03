@@ -74,3 +74,22 @@
   padding-top: 1.5vh;
   font-size: 3vh;
 }
+
+.image_input_btn{
+  display: block;
+  background-color: #136FFF;
+  width: 200px;
+  height: 6vh;
+  margin-left: 10px;
+  border-radius: 5px;
+  padding-top: 3vh;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5vh;
+}
+
+.image_form{
+  display: none;
+}
