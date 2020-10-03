@@ -1,0 +1,47 @@
+<%= render "shared/second-header"%>
+
+<%= form_with model: @user, url: user_registration_path, class: 'sign-in-form', local: true do |f| %>
+<div class="sign-contents">
+  <div class="sign-content">
+    <h2 class="sign-in-title">しんきとうろく</h2>
+
+    <div class="main-sign-in">
+    <%= render 'shared/error_messages', model: f.object %>
+      <div class='form-text-wrap'>
+        <h2 class="sign-in-titles">■にっくねーむ</h2>
+        <span class="indispensable">ひつよう</span>
+      </div>
+      <%= f.text_area :nickname, class:"sign_in_name_form", id:"nickname", placeholder:"れい）たろう" %>
+      <div class="sign-in-email">
+        <div class='form-text-wrap'>
+          <h2 class="sign-in-titles">■めーるあどれす</h2>
+          <span class="indispensable">ひつよう</span>
+        </div>
+        <%= f.email_field :email, class:"email_form", id:"email", placeholder:"れい）logs@log.com", autofocus: true %>
+        <p class="signin-comment">※おとうさん、おかあさん、ほごしゃの めーるあどれす でもよい</p>
+      </div>
+      <div class="sign-in-password">
+        <div class='form-text-wrap'>
+          <h2 class="sign-in-titles">■ぱすわーど</h2>
+          <span class="indispensable">ひつよう</span>
+        </div>
+        <%= f.password_field :password, class:"password_form", id:"password", placeholder:"れい）1a1a1a" %>
+        <p class="signin-comment">※すうじとえいじ、6もじ いじょうで せってい</p>
+      </div>
+      <div class="sign-in-password-confirmation">
+        <div class='form-text-wrap'>
+          <h2 class="sign-in-titles">■ぱすわーど（かくにん）</h2>
+          <span class="indispensable">ひつよう</span>
+        </div>
+        <%= f.password_field :password_confirmation, class:"password_form", id:"password-confirmation", placeholder:"おなじぱすわーど" %>
+      </div>
+      <div class="sign-in-send">
+        <%= f.submit "とうろく" ,class:"sign-send" %>
+        <%= link_to 'もどる', root_path, class:"back-btn" %>
+      </div>
+    </div>
+  </div>
+</div> 
+<% end %>
+
+<%= render "shared/footer" %>
