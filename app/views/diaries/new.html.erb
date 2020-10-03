@@ -8,26 +8,32 @@
     <%= render 'shared/error_messages', model: f.object %>
 
     <div class="main-post">
-        <div class="img-upload">
-          <div class="click-upload">
-          <h2 class="post-titles">■がぞう</h2>
-            <label  class="image_input_btn" %>
-              <span>がぞうをあっぷろーど</span>
-              <%= f.file_field :image, id:"diary-image", class: "image_form" %>
-            </label>
-          </div>
+      <div class="img-upload">
+        <div class="click-upload">
+        <h2 class="post-titles">■がぞう</h2>
+          <label  class="image_input_btn" %>
+            <span>がぞうをあっぷろーど</span>
+            <%= f.file_field :image, id:"diary-image", class: "image_form" %>
+          </label>
         </div>
+      </div>
+      <div class='form-text-wrap'>
         <h2 class="post-titles">■だいめい</h2>
+        <span class="indispensables">ひつよう</span>
+      </div>
         <%= f.text_area :title, class:"name_form", id:"diary-name", placeholder:"れい）かれーをつくった" %>
+      <div class='form-text-wrap'>
         <h2 class="post-titles">■ぶんしょう</h2>
+        <span class="indispensables">ひつよう</span>
+      </div>
         <%= f.text_area :text, class:"message_form", id:"diary-text", placeholder:"れい）はじめてかれーをつくった。とてもおいしかった。" %>
-        <div class="diary-send">
-          <%= f.submit "とうこう" ,class:"send" %>
-          <%=link_to 'もどる', root_path, class:"back-btn" %>
+      <div class="diary-send">
+        <%= f.submit "とうこう" ,class:"send" %>
+        <%=link_to 'もどる', root_path, class:"back-btn" %>
       </div>
     </div>
-    <% end %>
 
+    <% end %>
   </div>
 </div>
 

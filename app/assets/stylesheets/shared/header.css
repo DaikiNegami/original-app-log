@@ -29,15 +29,20 @@ li {
 .nav-lists {
   font-family: monospace;
   font-weight: bolder;
-  font-size: 3vh;
-  padding-top: 6vh;
+  font-size: 3.6vh;
+  padding-top: 5.5vh;
   display: flex;
   cursor: pointer;
-  margin-right: 8vw;
+  list-style: none;
 }
 
-.nav-list1 {
+.nav-list1,
+.nav-list2,
+.login,
+.sign-up {
   padding-right: 8vw;
+  text-decoration: none;
+  color: black;
 }
 
 
