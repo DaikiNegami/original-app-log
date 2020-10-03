@@ -1,6 +1,7 @@
 /* 日記投稿ページ */
 .posts {
   width: 100vw;
+  color: black;
 }
 
 .post-content {

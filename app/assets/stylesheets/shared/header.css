@@ -4,10 +4,15 @@ header {
   width: 100vw;
   display: flex;
   justify-content: space-between;
+  color: black;
 }
 
 .title {
   margin-left: 10vw;
+  font-size: 8vh;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
 }
 
 .heading {
