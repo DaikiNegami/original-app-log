@@ -22,15 +22,9 @@ header {
   font-weight: bolder;
 }
 
-li {
-  list-style: none;
-}
-
 .nav-lists {
   font-family: monospace;
   font-weight: bolder;
-  font-size: 3.6vh;
-  padding-top: 5.5vh;
   display: flex;
   cursor: pointer;
   list-style: none;
@@ -40,9 +34,17 @@ li {
 .nav-list2,
 .login,
 .sign-up {
-  padding-right: 8vw;
+  padding-right: 7vw;
   text-decoration: none;
   color: black;
 }
 
+.grid-6 {
+  font-size: 3.8vh;
+  padding-top: 4vh;
+}
+
+.nav-list1 {
+  font-size: 5vh;
+}
 
