@@ -43,40 +43,44 @@
   margin-top: 6vh;
 }
 
+.diary-link {
+  text-decoration: none;
+}
+
 .diaries {
   width: 95vw;
+  margin: 3vh 2vh;
+  padding: 4vh 0;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
-  margin: 3vh 2vw;
   border: 2px solid lightblue;
-  padding-top: 2vh;
+  font-size: 2.5vh;
 }
 
-.diary-top {
-  display: flex;
-  justify-content: space-between;
-  width: 230px;
+.diary {
+  margin: 0 1.5vw;
 }
 
-.message-date {
-  padding-left: 0.5vw;
+.diary-bottom {
+  padding-left: 10px;
+  background-color: #FFF;
+  color: black;
+  padding: 1vw;
 }
 
 .diary-name {
-  padding-right: 0.5vw;
-}
-
-.write-image {
-  width: 230px;
-  height: 190px;
-  cursor: pointer;
+  font-size: 2vh;
+  margin-bottom: 5vh;
 }
 
 .diary-title {
-  margin-bottom: 6vh;
-  width: 230px;
-  word-wrap: keep-all;
+  font-size: 3vh;
+}
+
+.item-image {
+  width: 33vh;
+  height: 33vh;
 }
 
 .no-diary {

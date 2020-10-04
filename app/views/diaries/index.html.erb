@@ -11,38 +11,33 @@
       <h2 class="heading-name">みんなのにっき</h2>
     </div>
     
+    <% if @diaries.present? %>
     <div class="diaries">
-      <% if @diaries.present? %>
       <% @diaries.each do |diary| %>
-      <div class="diary">
-        <%= link_to '#' do %>
-        <div class="diary-top">
-          <h4 class="message-date">
-            <%= l diary.created_at %>
-          </h4>
-          <h4 class='diary-name'>
-            <%= diary.nickname %>
-          </h4>
+        <div class="diary">
+          <%= link_to '#', class:"diary-link" do %>
+          <div class='item-img-content'>
+            <% if diary.image.present?%>
+              <%= image_tag diary.image, class: "item-image" %>
+            <% else %>
+              <%= image_tag "log.jpg", class:"item-image" %>
+            <% end %>
+          </div>
+          <div class="diary-bottom">
+            <h5 class="diary-title">
+              <%= diary.title %>
+            </h5>
+            <div class='diary-name'>
+              <span>なまえ　<%= diary.user.nickname %></span>
+            </div>
+          </div>
+          <% end %>
         </div>
-
-        <% if diary.image.present?%>
-          <%= image_tag diary.image, class: "item-img" %>
-        <% else %>
-          <%= image_tag "log.jpg", class:"write-image" %>
-        <% end %>
-
-        <div class="diary-titles">
-          <p class="diary-title">
-            <%= diary.title %>
-          </p>
-        </div>
-        <% end %>
-      </div>
       <% end %>
-      <% else %>
-      <div class="diary">
-        <h2 class="no-diary">まだにっきがありません</h1>
-      <% end %>
+    </div>
+    <% else %>
+      <h2 class="no-diary">まだにっきがありません</h2>
+    <% end %>
 
     </div>
   </div>
