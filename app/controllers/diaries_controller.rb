@@ -1,4 +1,5 @@
 class DiariesController < ApplicationController
+  before_action :authenticate_user!, only: [:new]
 
   def index
     @diaries = Diary.all
