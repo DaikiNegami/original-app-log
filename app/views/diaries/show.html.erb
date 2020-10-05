@@ -3,17 +3,17 @@
 <div class="friend-contents">
   <div class="main-content">
     <div class="upper-title">
-      <span class="heading-name"><%= @diary.user.nickname %>のにっき</span>
+      <span class="friend-heading-name"><%= @diary.user.nickname %>のにっき</span>
     </div>
     <div class="friend-diary">
       <div class="friend-diary-top">
-        <span class="friend-diary-title">だいめい：<%= @diary.title %></span>
+        <h3 class="friend-diary-title">だいめい：<%= @diary.title %></h3>
       </div>
       <div class="friend-image">
         <% if @diary.image.present?%>
           <%= image_tag @diary.image, class: "friend-diary-image" %>
         <% else %>
-          <%= image_tag "log.jpg", class:"item-image" %>
+          <%= image_tag "log.jpg", class:"friends-image" %>
         <% end %>
       </div>
       <div class="friend-diary-sentence">
@@ -37,28 +37,24 @@
       <ul class="friend-comments-contents">
         <li class="friend-comment">
           <div class="comments-top">
-            <p class="comment-date">2020/10/01</p>
             <p class='comment-name'>太郎</p>
           </div>
           <p class="diary-friend-comment">楽しそう</p>
         </li>
         <li class="friend-comment">
           <div class="comments-top">
-            <p class="comment-date">2020/10/01</p>
             <p class='comment-name'>じろう</p>
           </div>
           <p class="diary-friend-comment">いいね</p>
         </li>
         <li class="friend-comment">
           <div class="comments-top">
-            <p class="comment-date">2020/10/01</p>
             <p class='comment-name'>さぶろう</p>
           </div>
           <p class="diary-friend-comment">やった</p>
         </li>
         <li class="friend-comment">
           <div class="comments-top">
-            <p class="comment-date">2020/10/01</p>
             <p class='comment-name'>かほ</p>
           </div>
           <p class="diary-friend-comment">やりたい</p>
