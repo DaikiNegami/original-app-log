@@ -1,0 +1,36 @@
+ja:
+  time:
+    formats:
+      default: "%Y/%m/%d %H:%M:%S"
+
+ja:
+  activerecord:
+    attributes:
+      user:
+        nickname: にっくねーむ
+        email: めーるあどれす
+        password: ぱすわーど
+        password_confirmation: ぱすわーど（かくにん）
+      diary:
+        title: だいめい
+        text: ぶんしょう
+    errors:
+      format: "%{attribute} %{message}"
+      messages:
+        blank: をにゅうりょくしてね
+        confirmation: をただしくにゅうりょくしてね
+        empty: をにゅうりょくしてね
+        invalid: をただしくにゅうりょくしてね
+  devise:
+    errors:
+      format: "%{attribute} %{message}"
+      messages:
+        blank: をにゅうりょくしてね
+        confirmation: をただしくにゅうりょくしてね
+        empty: をにゅうりょくしてね
+        invalid: をただしくにゅうりょくしてね
+    failure:
+      invalid: ただしくにゅうりょくしてね
+      last_attempt: ただしくにゅうりょくしてね
+      not_found_in_database: ただしくにゅうりょくしてね
+      unauthenticated: ろぐいんしてね

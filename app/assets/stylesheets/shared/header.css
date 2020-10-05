@@ -1,0 +1,62 @@
+header {
+  background-color: lightcyan;
+  height: 13vh;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  color: black;
+}
+
+.title {
+  margin-left: 10vw;
+  font-size: 8vh;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+}
+
+.heading {
+  font-size: 3.5vh;
+  padding-bottom: 0.4vh;
+  font-family: serif;
+  font-weight: bolder;
+}
+
+.nav-lists {
+  font-family: monospace;
+  font-weight: bolder;
+  display: flex;
+  cursor: pointer;
+  list-style: none;
+}
+
+.nav-list1,
+.nav-list2,
+.login,
+.sign-up {
+  text-decoration: none;
+  color: black;
+}
+
+.nav-list0,
+.nav-list2,
+.login,
+.sign-up  {
+  padding-right: 5vh;
+}
+
+.nav-list0 {
+  font-weight: normal;
+  font-size: 3.5vh;
+}
+
+.grid-6 {
+  font-size: 3.8vh;
+  padding-top: 4vh;
+}
+
+.nav-list1 {
+  font-size: 5vh;
+  font-weight: bolder;
+}
+
