@@ -1,0 +1,110 @@
+/* 日記投稿ページ */
+.posts {
+  width: 100vw;
+  color: black;
+}
+
+.post-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 8vh 3vw;
+  border: 2px solid lightblue;
+}
+
+.post-titles {
+  font-size: 3vh;
+}
+
+.post-title {
+  border-bottom: 4px solid tomato;
+  margin-top: 5vh;
+  margin-bottom: 6vh;
+  font-size: 5vh;
+}
+
+.name_form,
+.img-upload {
+  margin-bottom: 4vh;
+}
+
+.name_form {
+  height: 10vh;
+}
+
+.message_form {
+  height: 45vh;
+  margin-bottom: 15vh;
+}
+
+.name_form,
+.message_form {
+  width: 80vw;
+  padding: 20px;
+  border: 1px solid lightgray;
+  display: block;
+  font-size: 3vh;
+}
+
+.diary-send {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10vh;
+}
+
+.send {
+  font-size: 4.5vh;
+  width: 230px;
+  height: 10vh;
+  background-color: lightskyblue;
+  cursor: pointer;
+  margin-bottom: 1vh;
+}
+
+.back-btn {
+  background-color: lightgrey;
+  width: 150px;
+  height: 6vh;
+  border: 1px solid black;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  color: black;
+  padding-top: 1.5vh;
+  font-size: 3vh;
+}
+
+.image_input_btn{
+  display: block;
+  background-color: #136FFF;
+  width: 200px;
+  height: 6vh;
+  margin-left: 10px;
+  border-radius: 5px;
+  padding-top: 3vh;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  font-size: 2.5vh;
+}
+
+.image_form{
+  display: none;
+}
+
+
+/* 共通 */
+.indispensables {
+  background-color: #ea352d;
+  height: 3vh;
+  margin-top: 2vh;
+  margin-left: 10px;
+  padding: 3px;
+  border-radius: 2px;
+  color: #fff;
+  font-size: 2vh;
+  font-weight: bold;
+}
