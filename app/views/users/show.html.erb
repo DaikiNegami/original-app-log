@@ -1,16 +1,4 @@
-<header>
-  <div class="heading">
-    <%= link_to 'ろぐ', "/", class:"title" %>
-  </div>
-  <div class="navbar">
-    <ul class="nav-lists">
-      <div class="user_nav grid-6">
-        <%= link_to 'みんなのにっき', "/", class: "nav-list2" %>
-        <%= link_to 'ろぐあうと', destroy_user_session_path, method: :delete, class: "nav-list2" %>
-      </div>
-    </ul>
-  </div>
-</header>
+<%= render "shared/third-header"%>
 
 <%= render "shared/diary-btn" %>
 

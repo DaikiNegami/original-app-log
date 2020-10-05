@@ -1,0 +1,97 @@
+/* 友達の日記（詳細ページ） */
+.friend-contents {
+  width: 100vw;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.friend-heading-name {
+  margin-bottom: 7vh;
+  border-bottom: 4px solid tomato;
+  font-size: 5vh;
+  margin-top: 6vh;
+  font-weight: bold;
+}
+
+.friend-diary {
+  width: 90vw;
+  margin: 0 2vw;
+  padding: 3vh 3vw 5vh;
+  font-size: 3vh;
+  border: 2px solid lightblue;
+}
+
+.friend-image {
+  text-align: center;
+}
+
+.friend-diary-image,
+.friends-image {
+  height: 50vh;
+  width: 90vw;
+  min-height: 400px;
+  background-color: rgb(205, 202, 202);
+  object-fit: contain;
+}
+
+
+.friend-comments-header {
+  margin-top: 8vh;
+}
+
+
+/* 友達のコメント */
+.friends-comments {
+  margin: 10vh 2vw 0;
+}
+
+.upper-comments-header {
+  display: flex;
+}
+
+.friend-comments-header {
+  margin: 2vh 2vw 3vh;
+  border-bottom: 3px solid tomato;
+  font-size: 20px;
+}
+
+.friend-comment {
+  margin: 0 2vw 1.5vh;
+  border: 1px solid lightblue;
+  padding: 0 10px 10px;
+  height: 9vh;
+  display: block;
+  font-size: 15px;
+}
+
+.comments-top {
+  display: flex;
+  height: 3vh;
+  padding-bottom: 1vh;
+  margin-bottom: 0.7vh;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 4vh 2vw 3vh;
+}
+
+.comment-text {
+  height: 20vh;
+  width: 80vw;
+  padding: 2vh;
+  display: block;
+  font-size: 3vh;
+}
+
+.comment-send {
+  height: 8vh;
+  width: 150px;
+  margin-top: 2vh;
+  text-align: center;
+  cursor: pointer;
+}
