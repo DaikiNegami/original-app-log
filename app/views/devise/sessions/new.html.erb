@@ -5,8 +5,12 @@
   <div class="sign-content">
     <h2 class="sign-in-title">ろぐいん</h2>
 
+    <div class='login-flash-message'>
+      <%= flash[:notice] %>
+      <%= flash[:alert] %>
+    </div>
+
     <div class="main-sign-in">
-    <%= render 'shared/error_messages', model: f.object %>
       <div class="sign-in-email">
         <div class='form-text-wrap'>
           <h2 class="sign-in-titles">■めーるあどれす</h2>
