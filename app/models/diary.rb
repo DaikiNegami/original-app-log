@@ -3,8 +3,6 @@ class Diary < ApplicationRecord
   has_many :comments
   has_one_attached :image
 
-  with_options presence: true do
-    validates :title, :text
-  end
+  validates :text, presence: true
 
 end
