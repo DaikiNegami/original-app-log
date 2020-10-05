@@ -1,0 +1,70 @@
+<%= render "shared/third-header"%>
+
+<div class="friend-contents">
+  <div class="main-content">
+    <div class="upper-title">
+      <span class="heading-name"><%= @diary.user.nickname %>のにっき</span>
+    </div>
+    <div class="friend-diary">
+      <div class="friend-diary-top">
+        <span class="friend-diary-title">だいめい：<%= @diary.title %></span>
+      </div>
+      <div class="friend-image">
+        <% if @diary.image.present?%>
+          <%= image_tag @diary.image, class: "friend-diary-image" %>
+        <% else %>
+          <%= image_tag "log.jpg", class:"item-image" %>
+        <% end %>
+      </div>
+      <div class="friend-diary-sentence">
+        <h3 class="friend-diary-text">ぶんしょう</h3>
+        <p class="friend-diary-contents"><%= @diary.text %></p>
+      </div>
+    </div>
+
+    <div class="friends-comments">
+      <div class="comments-forms">
+        <div class="comments-form">
+          <form class="comment-form">
+              <textarea name="comment" placeholder="こめんとする" class="comment-text"></textarea>
+              <input type="submit" value="こめんと" class="comment-send">
+          </form>
+        </div>
+      </div>
+      <div class="upper-comments-header">
+        <h2 class="friend-comments-header">〜みんなのこめんと〜</h2>
+      </div>
+      <ul class="friend-comments-contents">
+        <li class="friend-comment">
+          <div class="comments-top">
+            <p class="comment-date">2020/10/01</p>
+            <p class='comment-name'>太郎</p>
+          </div>
+          <p class="diary-friend-comment">楽しそう</p>
+        </li>
+        <li class="friend-comment">
+          <div class="comments-top">
+            <p class="comment-date">2020/10/01</p>
+            <p class='comment-name'>じろう</p>
+          </div>
+          <p class="diary-friend-comment">いいね</p>
+        </li>
+        <li class="friend-comment">
+          <div class="comments-top">
+            <p class="comment-date">2020/10/01</p>
+            <p class='comment-name'>さぶろう</p>
+          </div>
+          <p class="diary-friend-comment">やった</p>
+        </li>
+        <li class="friend-comment">
+          <div class="comments-top">
+            <p class="comment-date">2020/10/01</p>
+            <p class='comment-name'>かほ</p>
+          </div>
+          <p class="diary-friend-comment">やりたい</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+<%= render "shared/footer" %>
