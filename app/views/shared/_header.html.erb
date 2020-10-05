@@ -7,7 +7,7 @@
     <ul class="nav-lists">
       <% if user_signed_in? %>
         <div class="user_nav grid-6">
-          <span class="nav-list0"><%= link_to current_user.nickname, "#", class: "nav-list1" %>のにっき</span>
+          <span class="nav-list0"><%= link_to current_user.nickname, "/users/#{current_user.id}", class: "nav-list1" %>のにっき</span>
           <%= link_to 'ろぐあうと', destroy_user_session_path, method: :delete, class: "nav-list2" %>
         </div>
       <% else %>
