@@ -1,0 +1,50 @@
+<header>
+  <div class="heading">
+    <%= link_to 'ろぐ', "/", class:"title" %>
+  </div>
+  <div class="navbar">
+    <ul class="nav-lists">
+      <div class="user_nav grid-6">
+        <%= link_to 'みんなのにっき', "/", class: "nav-list2" %>
+        <%= link_to 'ろぐあうと', destroy_user_session_path, method: :delete, class: "nav-list2" %>
+      </div>
+    </ul>
+  </div>
+</header>
+
+<%= render "shared/diary-btn" %>
+
+<div class="contents">
+  <div class="main-content">
+    <div class="upper-title">
+      <span class="heading-name"><%= @nickname %>のにっき</span>
+    </div>
+
+    <% if @diaries.present? %>
+    <div class="diaries">
+      <% @diaries.each do |diary| %>
+        <div class="diary">
+          <%= link_to '#', class:"diary-link" do %>
+          <div class='item-img-content'>
+            <% if diary.image.present?%>
+              <%= image_tag diary.image, class: "item-image" %>
+            <% else %>
+              <%= image_tag "log.jpg", class:"item-image" %>
+            <% end %>
+          </div>
+          <div class="diary-bottom">
+            <h5 class="diary-title">
+              <%= diary.title %>
+            </h5>
+          </div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+    <% else %>
+      <h2 class="no-diary">まだにっきがありません</h2>
+    <% end %>
+  </div>
+</div>
+
+<%= render "shared/footer" %>
