@@ -8,18 +8,7 @@ class User < ApplicationRecord
   has_many :comments
 
   with_options presence: true do
-    validates :nickname, :email
+    validates :nickname
   end
-  
-  PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
-  validate :password_custom_error
-    def password_custom_error
-        if password.blank?
-          puts "ぱすわーどをにゅうりょくしてね"
-        else password.match(PASSWORD_REGEX) == nil
-          puts "ぱすわーどをただしくにゅうりょくしてね"
-        end
-    end
-
 
 end
