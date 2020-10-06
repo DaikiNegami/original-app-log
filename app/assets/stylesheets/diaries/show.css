@@ -54,23 +54,20 @@
 .friend-comments-header {
   margin: 2vh 2vw 3vh;
   border-bottom: 3px solid tomato;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .friend-comment {
-  margin: 0 2vw 1.5vh;
+  margin: 3vh 2vw;
   border: 1px solid lightblue;
-  padding: 0 10px 10px;
-  height: 9vh;
-  display: block;
-  font-size: 15px;
+  padding: 1.5vh 2.5vw;
+  font-size: 20px;
+  list-style: none;
 }
 
-.comments-top {
+.comments-show {
   display: flex;
-  height: 3vh;
-  padding-bottom: 1vh;
-  margin-bottom: 0.7vh;
+
 }
 
 .comments-form {
@@ -105,4 +102,16 @@
   text-align: center;
   font-size: 2.5vh;
   margin-bottom: 3vh;
+}
+
+.no-comments {
+  margin: 3vh 0;
+  padding: 4vh 2vw;
+  font-size: 3vh;
+  border: 1px solid lightblue;
+}
+
+.comment-link {
+  text-decoration: none;
+  color: black;
 }

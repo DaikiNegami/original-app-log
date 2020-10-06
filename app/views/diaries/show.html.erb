@@ -25,7 +25,8 @@
     <div class="friends-comments">
       <% if current_user %>
       <div class="comments-form">
-        <%= form_with model: @comment, local: true do |f| %>
+        <%= form_with model: [@diary, @comment], local: true do |f| %>
+        <%= render 'shared/error_messages', model: f.object %>
           <%= f.text_area :comment, placeholder: "こめんとする", class: "comment-text" %>
           <div class= "comments-send">
             <%= f.submit "こめんと", class: "comment-send" %>
@@ -38,14 +39,24 @@
       <div class="upper-comments-header">
         <h2 class="friend-comments-header">〜みんなのこめんと〜</h2>
       </div>
-      <ul class="friend-comments-contents">
-        <li class="friend-comment">
-          <div class="comments-top">
-            <p class='comment-name'><%= %></p>
-          </div>
-          <p class="diary-friend-comment">楽しそう</p>
-        </li>
-      </ul>
+      <% if @comments.present? %>
+        <% @comments.each do |comment| %>
+        <ul class="friend-comments-contents">
+          <li class="friend-comment">
+            <div class="comments-show">
+              <p>
+                <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}", class:"comment-link" %>：</strong>
+              </p>
+              <p>
+                <%= comment.comment %>
+              </p>
+            </div>
+          </li>
+        </ul>
+        <% end %>
+      <% else %>
+        <p class="no-comments">まだこめんとがありません</p>
+      <% end %>
     </div>
   </div>
 </div>
