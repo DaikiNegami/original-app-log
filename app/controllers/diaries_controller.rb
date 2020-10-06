@@ -2,7 +2,7 @@ class DiariesController < ApplicationController
   before_action :authenticate_user!, only: [:new]
 
   def index
-    @diaries = Diary.all
+    @diaries =Diary.includes(:user).order("created_at DESC")
   end
   
   def new
@@ -20,6 +20,8 @@ class DiariesController < ApplicationController
 
   def show
     @diary = Diary.find(params[:id])
+    @comment = Comment.new
+    @comments = @diary.comments.includes(:user)
   end
 
   private
