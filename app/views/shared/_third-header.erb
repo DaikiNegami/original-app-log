@@ -3,11 +3,20 @@
     <%= link_to 'ろぐ', "/", class:"title" %>
   </div>
   <div class="navbar">
+  <% if user_signed_in? %>
     <ul class="nav-lists">
       <div class="user_nav grid-6">
         <%= link_to 'みんなのにっき', "/", class: "nav-list2" %>
         <%= link_to 'ろぐあうと', destroy_user_session_path, method: :delete, class: "nav-list2" %>
       </div>
     </ul>
+  <% else %>
+    <ul class="nav-lists">
+      <div class="user_nav grid-6">
+        <%= link_to 'みんなのにっき', "/", class: "nav-list2" %>
+        <%= link_to 'しんきとうろく', new_user_registration_path, class: "sign-up" %>
+      </div>
+    </ul>
+  <% end %>
   </div>
 </header>
