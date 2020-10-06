@@ -12,7 +12,7 @@
     <div class="diaries">
       <% @diaries.each do |diary| %>
         <div class="diary">
-          <%= link_to '#', class:"diary-link" do %>
+          <%= link_to diary_path(diary.id), class:"diary-link" do %>
           <div class='item-img-content'>
             <% if diary.image.present?%>
               <%= image_tag diary.image, class: "item-image" %>
