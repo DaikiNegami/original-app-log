@@ -23,13 +23,17 @@
     </div>
 
     <div class="friends-comments">
-      <div class="comments-forms">
-        <div class="comments-form">
-          <form class="comment-form">
-              <textarea name="comment" placeholder="こめんとする" class="comment-text"></textarea>
-              <input type="submit" value="こめんと" class="comment-send">
-          </form>
-        </div>
+      <% if current_user %>
+      <div class="comments-form">
+        <%= form_with model: @comment, local: true do |f| %>
+          <%= f.text_area :comment, placeholder: "こめんとする", class: "comment-text" %>
+          <div class= "comments-send">
+            <%= f.submit "こめんと", class: "comment-send" %>
+          </div>
+        <% end %>
+      <% else %>
+      <strong><p class= "not-login">※※※ こめんとするには、しんきとうろく/ろぐいんがひつようです。 ※※※</p></strong>
+      <% end %>
       </div>
       <div class="upper-comments-header">
         <h2 class="friend-comments-header">〜みんなのこめんと〜</h2>
@@ -37,27 +41,9 @@
       <ul class="friend-comments-contents">
         <li class="friend-comment">
           <div class="comments-top">
-            <p class='comment-name'>太郎</p>
+            <p class='comment-name'><%= %></p>
           </div>
           <p class="diary-friend-comment">楽しそう</p>
-        </li>
-        <li class="friend-comment">
-          <div class="comments-top">
-            <p class='comment-name'>じろう</p>
-          </div>
-          <p class="diary-friend-comment">いいね</p>
-        </li>
-        <li class="friend-comment">
-          <div class="comments-top">
-            <p class='comment-name'>さぶろう</p>
-          </div>
-          <p class="diary-friend-comment">やった</p>
-        </li>
-        <li class="friend-comment">
-          <div class="comments-top">
-            <p class='comment-name'>かほ</p>
-          </div>
-          <p class="diary-friend-comment">やりたい</p>
         </li>
       </ul>
     </div>

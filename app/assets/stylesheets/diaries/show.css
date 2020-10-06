@@ -73,11 +73,11 @@
   margin-bottom: 0.7vh;
 }
 
-.comment-form {
+.comments-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 4vh 2vw 3vh;
+  margin: 4vh 2vw 5vh;
 }
 
 .comment-text {
@@ -88,10 +88,21 @@
   font-size: 3vh;
 }
 
+.comments-send {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .comment-send {
   height: 8vh;
   width: 150px;
   margin-top: 2vh;
-  text-align: center;
   cursor: pointer;
+}
+
+.not-login {
+  text-align: center;
+  font-size: 2.5vh;
+  margin-bottom: 3vh;
 }
