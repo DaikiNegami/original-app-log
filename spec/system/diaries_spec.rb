@@ -8,19 +8,8 @@ RSpec.describe '日記投稿', type: :system do
   end
   context '日記が投稿ができるとき'do
     it 'ログインしたユーザーは新規投稿できる' do
-      # トップページに移動する
-      visit root_path
-      # トップページにログインページへ遷移するボタンがある
-      expect(page).to have_content('ろぐいん')
-      # ログインページへ遷移する
-      visit new_user_session_path
-      # 正しいユーザー情報を入力する
-      fill_in 'email', with: @user.email
-      fill_in 'password', with: @user.password
-      # ログインボタンを押す
-      find('input[name="commit"]').click
-      # トップページへ遷移する
-      expect(current_path).to eq root_path
+      # ログインする
+      sign_in(@user)
       # 新規投稿ページへのリンクがある
       expect(page).to have_content('にっきをかく')
       # 投稿ページに移動する
@@ -54,19 +43,8 @@ RSpec.describe '日記の詳細', type: :system do
     @diary = FactoryBot.create(:diary)
   end
   it 'ログインしたユーザーはツイート詳細ページに遷移してコメント投稿欄が表示される' do
-    # トップページに移動する
-    visit root_path
-    # トップページにログインページへ遷移するボタンがある
-    expect(page).to have_content('ろぐいん')
-    # ログインページへ遷移する
-    visit new_user_session_path
-    # 正しいユーザー情報を入力する
-    fill_in 'email', with: @user.email
-    fill_in 'password', with: @user.password
-    # ログインボタンを押す
-    find('input[name="commit"]').click
-    # トップページへ遷移する
-    expect(current_path).to eq root_path
+    # ログインする
+    sign_in(@user)
     # 詳細ページに遷移する
     visit diary_path(@diary)
     # 詳細ページにツイートの内容が含まれている
@@ -94,19 +72,8 @@ RSpec.describe 'マイページ', type: :system do
   end
   context 'マイページが存在するとき'do
     it 'ログインしたユーザーのマイページボタンが表示' do
-      # トップページに移動する
-      visit root_path
-      # トップページにログインページへ遷移するボタンがある
-      expect(page).to have_content('ろぐいん')
-      # ログインページへ遷移する
-      visit new_user_session_path
-      # 正しいユーザー情報を入力する
-      fill_in 'email', with: @user.email
-      fill_in 'password', with: @user.password
-      # ログインボタンを押す
-      find('input[name="commit"]').click
-      # トップページへ遷移する
-      expect(current_path).to eq root_path
+      # ログインする
+      sign_in(@user)
       # マイページへのリンクがある
       expect(page).to have_content(@user.nickname)
       # マイページに移動する

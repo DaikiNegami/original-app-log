@@ -7,19 +7,8 @@ RSpec.describe 'コメント投稿', type: :system do
     @comment = Faker::Lorem.sentence
   end
   it 'ログインしたユーザーはツイート詳細ページでコメント投稿できる' do
-    # トップページに移動する
-    visit root_path
-    # トップページにログインページへ遷移するボタンがある
-    expect(page).to have_content('ろぐいん')
-    # ログインページへ遷移する
-    visit new_user_session_path
-    # 正しいユーザー情報を入力する
-    fill_in 'email', with: @user.email
-    fill_in 'password', with: @user.password
-    # ログインボタンを押す
-    find('input[name="commit"]').click
-    # トップページへ遷移する
-    expect(current_path).to eq root_path
+    # ログインする
+    sign_in(@user)
     # ツイート詳細ページに遷移する
     visit diary_path(@diary)
     # フォームに情報を入力する
