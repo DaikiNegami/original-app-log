@@ -84,7 +84,15 @@
   height: 33vh;
 }
 
+.no-diaries{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid lightblue;
+  margin: 3vh 3vw;
+}
+
 .no-diary {
   font-size: 3vh;
-  margin-bottom: 1vh;
+  padding: 4vh 2vw;
 }
